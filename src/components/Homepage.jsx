@@ -8,7 +8,13 @@ const { Title } = Typography;
 
 const Homepage = () => {
     const { data, isFetching } = useGetCryptosQuery()
+
     console.log(data)
+
+    const globalStats = data?.data?.stats
+
+    if (isFetching) return 'Loading...'
+
     return (
         <>
             <Title level={2} className='heading'>
@@ -16,21 +22,25 @@ const Homepage = () => {
             </Title>
             <Row>
                 <Col span={12}>
-                    <Statistic title='Total Cryptocurrencies' value='5' />
+                    <Statistic title='Total Cryptocurrencies' value={globalStats} />
                 </Col>
                 <Col span={12}>
-                    <Statistic title='Total Exchanges' value='5' />
+                    <Statistic title='Total Exchanges' value={milify(globalStats.totalExchanges)} />
                 </Col>
                 <Col span={12}>
-                    <Statistic title='Total Market Cap' value='5' />
+                    <Statistic title='Total Market Cap' value={milify(globalStats.totalMarketCap)} />
                 </Col>
                 <Col span={12}>
-                    <Statistic title='Total 24 Hour Volume' value='5' />
+                    <Statistic title='Total 24 Hour Volume' value={milify(globalStats.total24hVolume)} />
                 </Col>
                 <Col span={12}>
-                    <Statistic title='Total Markets' value='5' />
+                    <Statistic title='Total Markets' value={milify(globalStats.totalMarkets)} />
                 </Col>
             </Row>
+
+            <div className="home-heading-container">
+                <Title level={2} className='home-title'>Top 10 Cryptocurrencies</Title>
+            </div>
         </>
     );
 };
