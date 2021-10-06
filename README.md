@@ -1,14 +1,11 @@
-# Cryptoverse - Explore the World of Cryptocurrency
+# CryptoClient - Explore the World of Cryptocurrency
 
-![Cryptoverse](https://i.ibb.co/8gh5Jc8/image.png)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1707de24-d857-45f4-b578-b2cc3c64fef1/deploy-status)](https://app.netlify.com/sites/cryptoclient/deploys)
+
+![CyptoClient](https://i.ibb.co/8gh5Jc8/image.png)
 
 ## Introduction
-This is a code repository for the corresponding video tutorial. 
+ 
+Crypto web application that allows to browse different crypto currencies along with current events. 
 
-In this video, we will create a cryptocurrency app. We're going to use React and multiple APIs powered by https://rapidapi.com.
-
-By the end of this video, you will become the master of working with APIs.
-
-Setup:
-- run ```npm i && npm start``` to start the development server
 
