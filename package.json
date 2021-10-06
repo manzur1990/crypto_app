@@ -24,8 +24,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "./node_modules/.bin/netlify-lambda serve src",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
